@@ -1,0 +1,30 @@
+<nav class="navbar bg-light">
+  <h1 class="mx-auto">TO-DO LIST</h1>
+</nav>
+<div class="mt-5 mb-3 p-2 container text-center firstbox border">    
+  <div class="row ">
+    <div class="col-8 ">
+      <input type="textbox" class="px-3 py-2 m-2 form-control" placeholder="Add your task" [(ngModel)]= "Text">
+    </div>
+    <div class="col-4">
+      <button type="button" class="m-2 size bg-success border border-2 rounded-circle" (click)="addItem()">+</button>
+    </div>
+  </div>
+</div>
+<div class="container secondbox border mt-2 mb-3 text-center" *ngFor="let x of items,let index=index">
+  <br>
+  <div class="row">
+    <div class="col-8">
+      {{x}}
+    </div>
+    <div class="col-4">
+      <button type="button" class="mx-auto mb-3" (click)="del(index)">Delete</button>
+    </div>
+  </div>   
+</div>
+  
+    
+
+  
+
+<router-outlet></router-outlet>
